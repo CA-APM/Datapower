@@ -19,7 +19,7 @@ Enterprise Manager 10.5.1 and later
 
 Tested with IBM DataPower Gateway Firmware:IDG.7.5.0.0 and Build:274960.
 
-Other DataPower versions should also work. If you have problems, contact [CA Support.] (https://support.ca.com)
+Other DataPower versions should also work. If you have problems, contact [CA Support](https://support.ca.com).
 
 # Prerequisites
 Turn on the DataPower appliance XML Management interface.
@@ -30,10 +30,10 @@ Turn on the DataPower appliance XML Management interface.
 
 # Install DataPower Monitor
 
-1.  Download DataPower Monitor from the [CA APM Marketplace] (http://marketplace.ca.com/shop/ca/?cat=29).
+1.  Download DataPower Monitor from the [CA APM Github](https://github.com/CA-APM/Datapower/releases).
 2.  Navigate to the downloaded DataPower Monitor.
-3.	Unzip DatapowerMonitor.zip into the target installation directory, which we name &lt;*DataPower_Home*&gt;.
-4.	Copy Datapower_MM.jar from &lt;*DataPower_Home*&gt;/modules to the &lt;*MOM_Home*&gt;/deploy directory.
+3.	Unzip `DatapowerMonitor-4.0.0.zip` into the target installation directory, which we will reference as &lt;*DataPower_Home*&gt;.
+4.	Copy `Datapower_MM.jar` from &lt;*DataPower_Home*&gt;/modules to the &lt;*MOM_Home*&gt;/deploy directory.
 
 # Install the Server SSL Certificate
 The IBM WebSphere SOA Appliance DataPower XML Management Interface requires basic credentials over SSL authentication.
@@ -96,7 +96,7 @@ To provide the credentials, install the DataPower SSL server certificate into th
 		</properties>
 
   b. To monitor more than one DataPower appliance, add extra entries to the &lt;devices&gt; element. Be sure that you use the same values that are already defined in the &lt;properties&gt; element.
-  
+
   Here is an example where the `usr` (user) and `pwd` (password) properties shown in the Step 2.a. example code block &lt;properties&gt; element are used again in the &lt;devices&gt; element.
 
 		<devices>
@@ -112,10 +112,10 @@ To provide the credentials, install the DataPower SSL server certificate into th
 				</device>
 		</devices>
 
-  c. Configure the &lt;domains&gt; element values. 
+  c. Configure the &lt;domains&gt; element values.
 
   Add the DataPower appliance domains that you want to monitor to the &lt;domains&gt; element. The &lt;domains&gt; element is located within the &lt;engine&gt; element. Be sure that the `domain name` value matches a domain within DataPower.
-  
+
   DatapowerMonitor-config.xml includes three pre-defined domains: `default`, `HelloDP`, and `prod`. DataPower Monitor ignores domains that are not used.
 
   Here is an example &lt;domains&gt; element:
@@ -170,8 +170,8 @@ You can upgrade CA APM Monitor 3.2 for IBM WebSphere DataPower to CA APM Monitor
  a. Navigate to the &lt;*DataPower_Home*&gt;/config directory.  
  b. Copy these files and save them in a non-IBM WebSphere DataPower 3.2 directory:   
  *  datapower.properties  
- * DatapowerMonitor-config.xml 
-2. Download CA APM Monitor 4.0 for IBM WebSphere DataPower from the [CA APM Marketplace] (http://marketplace.ca.com/shop/ca/?cat=29).
+ * DatapowerMonitor-config.xml
+2. Download CA APM Monitor 4.0 for IBM WebSphere DataPower from the [CA APM Github](https://github.com/CA-APM/Datapower/releases)..
 3. Navigate to the downloaded DataPower Monitor.
 4. Unzip DapowerMonitor.zip into a target installation directory that is different from the CA APM Monitor 3.2 for IBM WebSphere DataPower &lt;*DataPower_Home*&gt; directory.  
    The name of the CA APM Monitor 4.0 for IBM WebSphere DataPower is now the &lt;*DataPower_Home*&gt; directory.
@@ -264,14 +264,26 @@ Here are the first lines of the error message:
 
 The workaround is to use the SUN JDK or to upgrade the JSSE version to 1.0.3 or later.
 
-# CA APM Extensions License Agreement
-[CA APM Extensions License Agreement] (https://marketplace.ca.com/shop/media/eulaset/file/a/p/appperfmgmtextagreementsupported_20.pdf)
+## License
+This field pack is provided under the [Eclipse Public License, Version 2.0](https://github.com/CA-APM/Datapower/blob/master/LICENSE).
 
-# Support URL
-https://support.ca.com
+## Support
+This document and associated tools are made available from CA Technologies as examples and provided at no charge as a courtesy to the CA APM Community
+at large. This resource may require modification for use in your environment. However, please note that this resource is not supported by CA Technologies,
+and inclusion in this site should not be construed to be an endorsement or recommendation by CA Technologies. These utilities are not covered by the
+CA Technologies software license agreement and there is no explicit or implied warranty from CA Technologies. They can be used and distributed freely
+amongst the CA APM Community, but not sold. As such, they are unsupported software, provided as is without warranty of any kind, express or implied,
+including but not limited to warranties of merchantability and fitness for a particular purpose. CA Technologies does not warrant that this resource
+will meet your requirements or that the operation of the resource will be uninterrupted or error free or that any defects will be corrected. The use
+of this resource implies that you understand and agree to the terms listed herein.
 
-# Product Compatibility Matrix
-http://pcm.ca.com/
+Although these utilities are unsupported, please let us know if you have any problems or questions by adding a comment to the CA APM Community Site area where the resource is located, so that the Author(s) may attempt to address the issue or question.
+
+Unless explicitly stated otherwise this field pack is only supported on the same platforms as the APM core agent. See [APM Compatibility Guide](https://techdocs.broadcom.com/us/product-content/status/compatibility-matrix/application-performance-management-compatibility-guide.html).
+
+
+### Support URL
+https://github.com/CA-APM/Datapower/issues
 
 # Categories
 Middleware/ESB Integration
